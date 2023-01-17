@@ -1,11 +1,11 @@
 package com.rgacademy.selenium.page.google;
 
+import com.rgacademy.selenium.autoframe.annotation.Page;
 import com.rgacademy.selenium.page.Base;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
+@Page
 public class GooglePage extends Base {
     @Autowired
     private SearchComponent searchComponent;

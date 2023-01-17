@@ -1,12 +1,10 @@
-package com.rgacademy.selenium.config;
+package com.rgacademy.selenium.autoframe.config;
 
 import com.github.javafaker.Faker;
+import com.rgacademy.selenium.autoframe.annotation.LazyConfiguration;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
-@Lazy
-@Configuration
+@LazyConfiguration
 public class FakerConfig {
 
     @Bean

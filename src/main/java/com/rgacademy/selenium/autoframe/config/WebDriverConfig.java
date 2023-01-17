@@ -1,38 +1,38 @@
-package com.rgacademy.selenium.config;
+package com.rgacademy.selenium.autoframe.config;
 
+import com.rgacademy.selenium.autoframe.annotation.LazyConfiguration;
+import com.rgacademy.selenium.autoframe.annotation.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.beans.factory.annotation.Value;
+import org.openqa.selenium.safari.SafariDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
-import java.time.Duration;
-
-@Lazy
-@Configuration
 @Profile("!remote")
+@LazyConfiguration
 public class WebDriverConfig {
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public WebDriver chromeDriver() {
         return new ChromeDriver();
     }
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         return new FirefoxDriver();
     }
 
-    @Bean
+    @ThreadScopeBean
+    @ConditionalOnProperty(name = "browser", havingValue = "safari")
+    public WebDriver safariDriver() {
+        return new SafariDriver();
+    }
+
+    @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver defaultDriver() {
         return new ChromeDriver();

@@ -1,14 +1,14 @@
 package com.rgacademy.selenium.page.google;
 
+import com.rgacademy.selenium.autoframe.annotation.PageFragment;
 import com.rgacademy.selenium.page.Base;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+@PageFragment
 public class SearchComponent extends Base {
 
     @FindBy(name = "q")
