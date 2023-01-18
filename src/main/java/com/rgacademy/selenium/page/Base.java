@@ -1,5 +1,6 @@
 package com.rgacademy.selenium.page;
 
+import com.rgacademy.selenium.autoframe.config.WebDriverWaitConfig;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.openqa.selenium.Capabilities;
@@ -16,6 +17,9 @@ public abstract class Base {
 
     @Autowired
     protected WebDriverWait wait;
+
+    @Autowired
+    protected WebDriverWaitConfig webDriverWaitConfig;
 
     @PostConstruct
     private void init() {

@@ -16,7 +16,7 @@ import java.nio.file.Path;
 
 @Lazy
 @Service
-public class  ScreenshotService {
+public class ScreenshotService {
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -32,7 +32,7 @@ public class  ScreenshotService {
         FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + ".png").toFile());
     }
 
-    public byte[] getScreenshot(){
+    public byte[] getScreenshot() {
         return this.applicationContext.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.BYTES);
     }
 

@@ -1,6 +1,7 @@
 package com.rgacademy.selenium.page.flights;
 
 import com.rgacademy.selenium.autoframe.annotation.Page;
+import com.rgacademy.selenium.autoframe.annotation.TakeScreenshot;
 import com.rgacademy.selenium.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +20,7 @@ public class FlightPage extends Base {
         this.driver.manage().window().maximize();
     }
 
+    @TakeScreenshot
     public List<String> getLabels(){
        return this.elements
                 .stream()
