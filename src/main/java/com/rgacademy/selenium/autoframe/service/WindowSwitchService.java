@@ -21,7 +21,8 @@ public class WindowSwitchService {
 
     public void switchByTitle(final String windowTitle) {
         WebDriver driver = this.ctx.getBean(WebDriver.class);
-        driver.getWindowHandles().stream().map(handle -> driver.switchTo().window(handle).getTitle()).filter(title -> title.startsWith(windowTitle)).findFirst().orElseThrow(() -> {
+        driver.getWindowHandles().stream().map(handle -> driver.switchTo().window(handle).getTitle())
+                .filter(title -> title.startsWith(windowTitle)).findFirst().orElseThrow(() -> {
             throw new RuntimeException("No such window opened");
         });
     }
@@ -41,6 +42,4 @@ public class WindowSwitchService {
         WebDriver driver = this.ctx.getBean(WebDriver.class);
         webDriverWaitConfig.webDriverWait(driver).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
     }
-
-
 }
