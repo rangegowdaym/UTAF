@@ -8,8 +8,8 @@
         <version>3.0.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.rgacademy.selenium</groupId>
-    <artifactId>TestAutomationFramework</artifactId>
+    <groupId>org.rgacademy.utaf</groupId>
+    <artifactId>UTAF</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>TestAutomationFramework</name>
     <description>MR spring selenium test automation framework</description>

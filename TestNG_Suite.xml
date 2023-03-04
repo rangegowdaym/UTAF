@@ -2,12 +2,12 @@
 <suite name="spring-boot" parallel="tests" thread-count="2">
     <test name="test-1">
         <classes>
-            <class name="com.rgacademy.selenium.googleTest.Google1Test" />
+            <class name="googleTest.org.rgacademy.utaf.Google1Test" />
         </classes>
     </test>
     <test name="test-2">
         <classes>
-            <class name="com.rgacademy.selenium.googleTest.Google2Test" />
+            <class name="googleTest.org.rgacademy.utaf.Google2Test" />
         </classes>
     </test>
 </suite>
