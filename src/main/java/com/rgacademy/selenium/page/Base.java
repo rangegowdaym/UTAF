@@ -1,8 +1,8 @@
 package com.rgacademy.selenium.page;
 
 import com.rgacademy.selenium.autoframe.config.WebDriverWaitConfig;
+
 import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
