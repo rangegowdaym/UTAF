@@ -1,6 +1,7 @@
-package org.rgacademy.utaf.page;
+package com.rgacademy.selenium.page;
 
-import org.rgacademy.utaf.autoframe.config.WebDriverWaitConfig;
+import com.rgacademy.selenium.autoframe.config.WebDriverWaitConfig;
+
 import jakarta.annotation.PostConstruct;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
